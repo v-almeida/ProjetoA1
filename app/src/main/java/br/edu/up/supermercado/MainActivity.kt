@@ -10,14 +10,13 @@ import com.example.supermercado.ui.SupermercadoApp
 import com.example.supermercado.viewmodel.ProdutoViewModel
 
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val database = SupermercadoDB.getDatabase(this)
         val repository = ProdutoRepository(database.produtoDao())
 
         val viewModel: ProdutoViewModel by viewModels {
-            ProdutoViewModel(repository)
+            ProdutoViewModelFactory(repository)  // Usando a ViewModelFactory
         }
 
         setContent {
