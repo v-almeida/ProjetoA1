@@ -49,15 +49,18 @@ android {
     }
 }
 dependencies {
-    implementation(libs.androidx.room.common)
-    implementation(libs.androidx.foundation.layout.android)
+    implementation ("androidx.room:room-runtime:2.4.2")
+    implementation ("androidx.compose.ui:ui:1.4.0")
+    implementation ("androidx.compose.material:material:1.3.2")
+    implementation ("androidx.compose.ui:ui-tooling-preview:1.3.2")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0")
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.material3.android)
-    implementation(libs.androidx.ui.tooling.preview.android)
-    implementation("androidx.activity:activity-compose:1.7.2")
-    implementation("androidx.compose.ui:ui:1.5.0")
-    implementation("androidx.compose.material3:material3:1.2.0")
-    implementation(libs.androidx.room.ktx)
+    implementation ("androidx.activity:activity-compose:1.7.0")
+    implementation ("androidx.compose.ui:ui:1.4.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0")
 }
 
 
