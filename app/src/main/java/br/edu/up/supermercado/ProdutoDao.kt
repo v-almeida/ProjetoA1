@@ -1,6 +1,7 @@
 package com.example.supermercado.data
 
 import androidx.room.*
+import androidx.room.OnConflictStrategy
 import com.example.supermercado.model.Produto
 import kotlinx.coroutines.flow.Flow
 

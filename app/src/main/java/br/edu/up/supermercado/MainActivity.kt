@@ -8,6 +8,7 @@ import com.example.supermercado.data.SupermercadoDB
 import com.example.supermercado.repository.ProdutoRepository
 import com.example.supermercado.ui.SupermercadoApp
 import com.example.supermercado.viewmodel.ProdutoViewModel
+import com.example.supermercado.viewmodel.ProdutoViewModelFactory
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
         val repository = ProdutoRepository(database.produtoDao())
 
         val viewModel: ProdutoViewModel by viewModels {
-            ProdutoViewModelFactory(repository)  // Usando a ViewModelFactory
+            ProdutoViewModelFactory(repository)
         }
 
         setContent {
